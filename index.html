@@ -24,18 +24,18 @@
 
     <section class="main-content">
 <h3><a class="anchor" href="#step1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.开启Mysql Binlog Replication.</h3>
-<p>
-更改my.cnf
-<code>
-[mysqld]
-log-bin=mysql-bin
+
+更改my.cnf，并重启mysqld进程
+<div style="font-size: 14px;background:rgb(43,43,43);color:rgb(169,183,198);padding: 8px;">
+[mysqld]</br>
+log-bin=mysql-bin</br>
 binlog-format=ROW
-</code>
-建立replication用的账户
+</div>
+建立replication用的账户</br>
 <code>
 GRANT REPLICATION SLAVE ON *.* to '账户名'@'主机' identified by '密码'
 </code>
-</p>
+
 
 <h3><a class="anchor" href="#step2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.集成至项目</h3>
 
