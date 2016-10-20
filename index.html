@@ -47,12 +47,16 @@ GRANT REPLICATION SLAVE ON *.* to '账户名'@'主机' identified by '密码'
 </p>
 
 <h3><a class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4.实现Listener</h3>
-
+<p>实现RowCallback接口的监听器将获得到未处理过的原始数据，而继承自DefaultAutoMappingListener的监听器，将会自动匹配对应实体。</p>
 <p>
 <img src = "./images/listener.png" width="100%" />
 </p>
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+<h3><a class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5.实现和表相对应的实体</h3>
+<p>@Table注解的value值必须为schama.tablename，字段类型需与column类型相对应</p>
+<p>
+<img src = "./images/entity.png" width="100%" />
+</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/tctxl/gulosity">Gulosity-web</a> is maintained by <a href="https://github.com/tctxl">tctxl</a>.</span>
